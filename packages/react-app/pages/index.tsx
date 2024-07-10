@@ -81,7 +81,7 @@ export default function Home() {
             const tx = await deployContract();
             setTx(tx);
         } catch (error) {
-            console.log(error);
+            throw error;
         } finally {
             setContractDeploymentLoading(false);
         }
